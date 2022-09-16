@@ -1,0 +1,63 @@
+############################################################################
+File generated using command script ws3.txt
+File edited with vi to answer the questions
+
+1) Sort the customer IDs in order to find the customer who authored 
+   the most reviews. Which customers are the top 3 reviewers 
+   (with the most reviews)?
+   Commands used: 
+   cut -f 2 amazon_reviews_us_Books_v1_02.tsv |sort > amazon_reviews.txt
+   uniq -c amazon_reviews.txt | sort -nr | head
+
+   Customers with the top three reviews in order were 
+   21922   50122160
+   9964	   50732546
+   2664    52615377
+   Here the first column is number of reviews and second column is customer ID
+
+2) Sort the products in order to find the product that has the most reviews. 
+   What are the top 3 most reviewed products?
+   Commands used:
+   cut -f 4 amazon_reviews_us_Books_v1_02.tsv |sort > amazon_reviews.txt
+   uniq -c amazon_reviews.txt | sort -nr | head
+
+   Top three products with the most reviews
+   4625	   043935806X
+   3739    0439139597
+   2666    0525947647
+   Here the first column is number of reviews and second column is 
+   product ID.
+
+Script output included below.
+
+############################################################################
+
+
+Script started on 2022-09-16 01:43:45-04:00
+]0;ananya@sjsu:~/ws3[ananya@sjsu ws3]$ cut -f 2 amazon_reviews_us_Books_v1_02.tsv |sort > amazon_reviiews.txt
+]0;ananya@sjsu:~/ws3[ananya@sjsu ws3]$ uniq -c amazon_reviews.txt | sort -nr | head
+  21922 50122160
+   9964 50732546
+   2664 52615377
+   2215 45041039
+   1797 50776149
+   1786 50913245
+   1643 20595117
+   1622 45273033
+   1416 39569598
+   1384 49693975
+]0;ananya@sjsu:~/ws3[ananya@sjsu ws3]$ cut -f 4 amazon_reviews_us_Books_v1_02.tsv |sort > amazon_reviiews.txt
+]0;ananya@sjsu:~/ws3[ananya@sjsu ws3]$ uniq -c amazon_reviews.txt | sort -nr | head
+   4625 043935806X
+   3739 0439139597
+   2666 0525947647
+   2615 0895260174
+   2584 0385504209
+   2366 0590353403
+   2052 0439784549
+   2024 0316666343
+   1795 1400050308
+   1772 0312864590
+]0;ananya@sjsu:~/ws3[ananya@sjsu ws3]$ exit
+
+Script done on 2022-09-16 01:46:44-04:00

@@ -1,0 +1,5 @@
+  521  cut -f 2 amazon_reviews_us_Books_v1_02.tsv |sort > amazon_reviews.txt
+  522  uniq -c amazon_reviews.txt | sort -nr | head
+  523  cut -f 4 amazon_reviews_us_Books_v1_02.tsv |sort > amazon_reviews.txt
+  524  uniq -c amazon_reviews.txt | sort -nr | head
+  525  history > cmds.log
